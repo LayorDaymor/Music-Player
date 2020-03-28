@@ -1,0 +1,168 @@
+body, html{
+  margin: 0em;
+  padding: 0;
+  --hinterground-farbe: #95cbdc;
+  --surface-farbe: #DFE9FC;
+  background-color: var(--hinterground-farbe);
+  height: 100vh;
+  color: #555;
+  font-family: sans-serif;
+}
+
+.container{
+  background:linear-gradient(var(--surface-farbe)white);
+  max-width: 411px;
+  max-height: 82px;
+  margin: auto;
+  border-radius: 35px;
+  height: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 80px auto 85px 70px 170px;  
+  grid-template-columns: 120px auto 120px;
+  grid-template-areas:  "top-left top-middle top-right"
+                        "album-cover album-cover album-cover"
+                        "song-titel song-titel song-titel"
+                        "song-progress song-progress song-progress" 
+                        "bottom-left bottom-middle bottom-right";
+}
+.box{
+
+}
+.full-width1 {
+  grid-column: 1/ span 3;
+}
+
+.full-width2 {
+  grid-column: 1/ span 3;
+}
+
+.full-width3 {
+  grid-column: 1/ span 3;
+}
+.top-left{
+  grid-area: top-left;
+  display: grid;
+  margin: auto;
+}
+.top-middle{
+  grid-area: top-middle;
+  display: grid;
+  margin: auto;
+}
+.top-right{
+  grid-area: top-right;
+  display: grid;
+  margin: auto;
+}
+
+.album-cover{
+  grid-area: album-cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.song-titel{
+  grid-area: song-titel;
+  display: grid;
+  margin: auto;
+  line-height: 0px;
+}
+.song-progress{
+  grid-area: song-progress;
+}
+
+
+.bottom-left{
+  grid-area: bottom-left;
+  display: grid;
+  margin: auto;
+}
+.bottom-middle{
+  grid-area: bottom-middle;
+  display: grid;
+  margin: auto;
+}
+.bottom-right{
+  grid-area: bottom-right;
+  display: grid;
+  margin: auto;
+}
+
+
+.record-outer{
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  border: 7px solid var(--surface-farbe);
+  background: var(--surface-farbe);
+  box-shadow:   10px 10px 30px rgba(0,0,0,0.2),
+              -10px -10px 30px rgba(255, 255, 255, 0.8);
+  display: grid;
+  
+}
+
+.record-inner{
+  background-image: url(https://source.unsplash.com/random/220x220);
+  animation: spin 10s linear infinite;
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.button-active{
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-color: var(--hinterground-farbe);
+  text-align: center;
+  box-shadow: inset 10px 10px 10px #6E91FF,
+              inset -3px -3px 5px rgba(255, 255, 255, 0.8);
+}
+.backword-active{
+  height: 68px;
+  width: 68px;
+  border-radius: 50%;
+  background-color: var(--surface-farbe);
+  box-shadow:         -10px -10px 20px rgba(255, 255, 255, 0.8),
+                       10px 10px 20px rgba(0, 0, 0, 0.2),
+                 inset 10px 10px 10px rgba(255, 255, 255, 0.8);
+
+}
+.forword-active{
+  height: 68px;
+  width: 68px;
+  border-radius: 50%;
+  background-color: var(--surface-farbe);
+  box-shadow:         -10px -10px 20px rgba(255, 255, 255, 0.8),
+                      10px 10px 20px rgba(0, 0, 0, 0.2),
+                inset 10px 10px 10px rgba(255, 255, 255, 0.8);
+}
+.go-back{
+  width: 36px;
+  height: 36px;
+  box-shadow:         -10px -10px 20px rgba(255, 255, 255, 0.8),
+                      10px 10px 20px rgba(0, 0, 0, 0.2),
+                inset 10px 10px 10px rgba(255, 255, 255, 0.8);
+}
+.top-menu{
+  width: 36px;
+  height: 36px;
+  box-shadow:         -10px -10px 20px rgba(255, 255, 255, 0.8),
+                      10px 10px 20px rgba(0, 0, 0, 0.2),
+                inset 10px 10px 10px rgba(255, 255, 255, 0.8);
+}
+button{
+background: none;
+border-radius: 50%;
+}
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
